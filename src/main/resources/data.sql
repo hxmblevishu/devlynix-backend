@@ -1,0 +1,10 @@
+MERGE INTO skills (name) KEY(name) VALUES ('Java');
+MERGE INTO skills (name) KEY(name) VALUES ('Spring Boot');
+MERGE INTO skills (name) KEY(name) VALUES ('React');
+MERGE INTO skills (name) KEY(name) VALUES ('UI/UX');
+MERGE INTO skills (name) KEY(name) VALUES ('Figma');
+MERGE INTO skills (name) KEY(name) VALUES ('PostgreSQL');
+MERGE INTO skills (name) KEY(name) VALUES ('MongoDB');
+MERGE INTO skills (name) KEY(name) VALUES ('Docker');
+MERGE INTO skills (name) KEY(name) VALUES ('Machine Learning');
+MERGE INTO skills (name) KEY(name) VALUES ('Flutter');
