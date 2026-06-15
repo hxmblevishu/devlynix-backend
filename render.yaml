@@ -1,9 +1,7 @@
 services:
   - type: web
     name: devlynix-backend
-    env: java
-    buildCommand: ./mvnw clean install -DskipTests
-    startCommand: java -jar target/*.jar
+    env: docker
     envVars:
       - key: PGHOST
         fromDatabase:
