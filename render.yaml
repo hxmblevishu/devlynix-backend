@@ -2,6 +2,7 @@ services:
   - type: web
     name: devlynix-backend
     env: docker
+    plan: free
     envVars:
       - key: PGHOST
         fromDatabase:
