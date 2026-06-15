@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: devlynix-backend
+    env: java
+    buildCommand: ./mvnw clean install -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: PGHOST
+        fromDatabase:
+          name: devlynix-db
+          property: host
+      - key: PGPORT
+        value: 5432
+      - key: PGDATABASE
+        fromDatabase:
+          name: devlynix-db
+          property: database
+      - key: PGUSER
+        fromDatabase:
+          name: devlynix-db
+          property: user
+      - key: PGPASSWORD
+        fromDatabase:
+          name: devlynix-db
+          property: password
+      - key: SQL_INIT_MODE
+        value: always
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_ORIGINS
+        sync: false
+
+databases:
+  - name: devlynix-db
+    plan: free
